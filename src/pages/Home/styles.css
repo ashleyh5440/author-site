@@ -9,7 +9,7 @@ h1 {
 .fireflies-container {
     position: absolute;
     width: 100%;
-    height: 620px;
+    min-height: 100vh;
     overflow: hidden;
 }
 
@@ -29,6 +29,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    border: 2px solid green;
 }
 
 .row {
@@ -46,7 +47,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh; 
+    border: 2px solid green;
 }
 
 #intro {
@@ -81,4 +82,38 @@ h1 {
     width: 50%;
     line-height: 1.6;
 }
+
+#poetry {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8%;
+    width: 100vw !important;
+    height: 90vh;
+    background-color: rgba(0, 0, 255, 0.248);
+}
+
+.carousel {
+    width: 70%;
+    /* margin-top: 20%; */
+    height: 800px;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 80vh;
+}
+
+.carousel-caption {
+    height: 75vh;
+    text-align: center;
+}
+
+.carousel-caption h3 {
+    margin: 25% 5%;
+    font-family: "Cedarville Cursive", cursive;
+    font-size: 40px;
+}
+
 

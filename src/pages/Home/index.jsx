@@ -1,17 +1,18 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';r
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Carousel from 'react-bootstrap/Carousel';
 
 import tsdCover from '../../../public/images/tsd-cover.png'
 import './styles.css';
 
 function Home() {
     const fireFliesContainerRef = useRef(null);
-    const totalFireFlies = 60;
+    const totalFireFlies = 80;
 
     useEffect(() => {
         // initialize ScrollTrigger
@@ -99,6 +100,50 @@ function Home() {
                             <p>As atrocities mount and blood is shed, Rana and Oni become positioned to change the fate of their people. To do so, they must answer one question: is freedom worth the risk of total eradication?</p>
                         </Col>
                     </Row>
+                </Container>
+                <Container className="container" id="poetry">
+                    <Carousel>
+                        <Carousel.Item>
+                            <Carousel.Caption>
+                            <h3>In the place where he hid our dreams</h3>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <Carousel.Caption>
+                                <h3>My goddess is of many faces</h3>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <Carousel.Caption>
+                                <h3>My home is one made of glass</h3>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <Carousel.Caption>
+                                <h3>With low and seductive tones he calls</h3>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <Carousel.Caption>
+                                <h3>I think it's funny</h3>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <Carousel.Caption>
+                                <h3>For her</h3>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <Carousel.Caption>
+                                <h3>Baby girl with the beautiful mind</h3>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <Carousel.Caption>
+                                <h3>Baby boy with the tender arms</h3>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                    </Carousel>
                 </Container>
             </div>
         </section>

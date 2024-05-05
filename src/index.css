@@ -35,3 +35,10 @@ title {
   font-family: sans-serif;
   background-color: none;
 }
+
+#root {
+  height: 100vh;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
