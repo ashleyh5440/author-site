@@ -1,12 +1,13 @@
 .container {
-  position: relative;
+  /* position: relative; */
+  margin: 0%;
 }
 
-.page {
+/* .page {
   position: absolute;
   left: 15px;
   right: 15px;
-}
+} */
 
 .page-enter {
   opacity: 0;

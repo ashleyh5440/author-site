@@ -6,11 +6,24 @@ h1 {
     color: white;
 }
 
+.home-page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0%;
+}
+
 .fireflies-container {
-    position: absolute;
-    width: 100%;
+    min-width: 95vw;
     min-height: 100vh;
     overflow: hidden;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .dot {
@@ -23,15 +36,6 @@ h1 {
     z-index: 2;
 }
 
-.content {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    border: 2px solid green;
-}
-
 .row {
     display: flex;
     flex-direction: row;
@@ -39,27 +43,75 @@ h1 {
     width: 100%;
 }
 
+.carousel {
+    width: 70%;
+    height: 800px;
+}
 
-#home-page {
-    position: relative;
+.carousel-item {
     width: 100%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 2px solid green;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.152);
+}
+
+.carousel-caption {
+    text-align: center;
+}
+
+.carousel-caption h3 {
+    font-size: 25px;
+}
+
+.carousel-caption button {
+    border: none;
+    background-color: rgb(214, 0, 86);
+    padding: 4% 9%;
+    margin-top: 12%;
+    margin-bottom: 10%;
+    font-size: 20px;
+}
+
+.carousel-caption button:hover, .carousel-caption button:active, .carousel-caption button:focus {
+    border: none;
+    background-color: rgb(162, 1, 65) !important;
+    padding: 4% 9%;
+    font-size: 20px;
+}
+
+.carousel-indicators {
+    display: none;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    height: 500px;
 }
 
 #intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     text-align: center;
-    margin-top: 10%;
+    margin-top: 7%;
 }
 
 #intro-image {
     margin-top: 5%;
-    height: 620px;
-    border: 2px solid purple;
+    width: 30%;
+    opacity: 0.5;
+    /* height: 600px; */
+}
+
+#intro-image img {
+    width: 100%;
+}
+
+#intro-poem {
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 50%;
+    font-size: 24px;
+    color: white;
 }
 
 #novel {
@@ -68,14 +120,22 @@ h1 {
 }
 
 #book-cover {
-    width: 45%;
+    width: 400px;
     height: 515px;
-    background-image: linear-gradient( #b20c0c, rgb(45, 6, 6));
+    padding: 0%;
+    background-image: url("../../../public/images/tsd-cover.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
-#tsd-cover {
-    width: 100%;
-    margin-top: 7.5%;
+#book-cover h3 {
+    font-family: "Almendra", serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    margin-top: 8%;
 }
 
 #blurb {
@@ -88,32 +148,43 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 8%;
-    width: 100vw !important;
-    height: 90vh;
-    background-color: rgba(0, 0, 255, 0.248);
+    background-image: url("../../../public/images/poetry.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
-.carousel {
-    width: 70%;
-    /* margin-top: 20%; */
-    height: 800px;
+@media screen and (max-width: 1024px) {
+    #intro-poem {
+        margin-top: 14%;
+        margin-left: 52%;
+        font-size: 17px;
+    }
+
 }
 
-.carousel-item {
-    width: 100%;
-    height: 80vh;
-}
+@media screen and (max-width: 768px) {
+    #intro-image {
+        margin-top: 5%;
+        width: 60%;
+    }
 
-.carousel-caption {
-    height: 75vh;
-    text-align: center;
-}
+    #intro-poem {
+        /* position: absolute; */
+        margin-top: 20%;
+        /* margin-left: 50%; */
+        margin-right: 50%;
+        width: 30%;
+        font-size: 20px;
+        color: white;
+    }
 
-.carousel-caption h3 {
-    margin: 25% 5%;
-    font-family: "Cedarville Cursive", cursive;
-    font-size: 40px;
+    #novel {
+        display: flex;
+        flex-direction: column;
+        align-items: center !important;
+        flex-wrap: wrap;
+        border: 2px solid red;
+    }
 }
 
 

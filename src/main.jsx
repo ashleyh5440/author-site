@@ -15,6 +15,8 @@ import Navigation from './components/Navigation';
 import Home from './pages/Home';
 import About from './pages/About'
 import Contact from './pages/Contact';
+import Poetry from './pages/Poetry'
+// import Campfire from './components/Campfire';
 
 const routes = [
   {
@@ -35,6 +37,18 @@ const routes = [
       element: <Contact />,
       nodeRef: createRef()
     },
+    {
+      path: '/poetry',
+      name: 'Poetry',
+      element: <Poetry />,
+      nodeRef: createRef()
+    },
+    // {
+    //   path: '/campfire',
+    //   name: 'Campfire',
+    //   element: <Campfire />,
+    //   nodeRef: createRef()
+    // },
 ]
 
 const router = createBrowserRouter([

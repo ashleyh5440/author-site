@@ -3,10 +3,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from 'react-router-dom';
 
+import './styles.css';
 
 function Navigation({ routes }) {
   return (
-    <Navbar bg="dark">
+    <Navbar>
       <Nav className="mx-auto">
         {routes.map((route) => (
           <Nav.Link
@@ -24,3 +25,5 @@ function Navigation({ routes }) {
 }
 
 export default Navigation;
+
+
