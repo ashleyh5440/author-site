@@ -40,7 +40,10 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
+    padding: 0%;
+    border: 2px solid green;
 }
 
 .carousel {
@@ -99,7 +102,6 @@ h1 {
     margin-top: 5%;
     width: 30%;
     opacity: 0.5;
-    /* height: 600px; */
 }
 
 #intro-image img {
@@ -119,15 +121,12 @@ h1 {
     padding: 2%;
     min-width: 100vw;
 }
-/* #novel {
-    width: 80%;
-    margin-top: 8%;
-} */
 
 #book-cover {
     width: 400px;
     height: 515px;
     padding: 0%;
+    margin: 0%;
     background-image: url("../../../public/images/tsd-cover.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -164,10 +163,15 @@ h1 {
         margin-left: 52%;
         font-size: 17px;
     }
-
 }
 
 @media screen and (max-width: 768px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
     #intro h1 {
         margin-top: 15%;
     }
@@ -178,20 +182,15 @@ h1 {
     }
 
     #intro-poem {
-        /* position: absolute; */
         margin-top: 45%;
-        /* margin-left: 50%; */
-        margin-right: 50%;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+        margin-right: 50%;                 
         width: 90%;
         font-size: 20px;
         color: white;
     }
 
     #novel {
-        display: flex;
-        flex-direction: column;
-        align-items: center !important;
-        flex-wrap: wrap;
+        padding: 0%
     }
 
     #left {
@@ -224,9 +223,7 @@ h1 {
     }
 
     #intro-poem {
-        /* position: absolute; */
         margin-top: 40%;
-        /* margin-left: 50%; */
         margin-right: 50%;
         width: 90%;
         font-size: 20px;
@@ -247,6 +244,13 @@ h1 {
     #blurb {
         width: 90%;
         margin-left: 5%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #book-cover {
+        width: 250px;
+    height: 365px;
     }
 }
 
