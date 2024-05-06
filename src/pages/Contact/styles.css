@@ -1,0 +1,32 @@
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: rgb(42, 4, 52);
+}
+
+.fireflies-container {
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden !important;
+    position: relative;
+}
+
+.dot {
+    width: 4px;
+    height: 4px;
+    background-color: #f0d20c;
+    box-shadow: 0px 0px 11px 4px #f0d20c;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+}
+
+.contact-info {
+    width: 100%;
+    margin-top: 30%;
+    text-align: center;
+}

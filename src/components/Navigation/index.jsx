@@ -1,13 +1,10 @@
-import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from 'react-router-dom';
 
-import './styles.css';
-
 function Navigation({ routes }) {
   return (
-    <Navbar>
+    <Navbar style={{backgroundColor: "rgb(42, 4, 52)"}}>
       <Nav className="mx-auto">
         {routes.map((route) => (
           <Nav.Link

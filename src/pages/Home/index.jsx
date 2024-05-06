@@ -45,7 +45,7 @@ function Home() {
             const containerHeight = containerRect.height;
 
             gsap.to(elm, {
-                duration: Math.random() * 20 + 10,
+                duration: Math.random() * 10 + 10,
                 x: Math.random() * containerWidth,
                 y: Math.random() * containerHeight,
                 opacity: Math.random(),
@@ -71,16 +71,12 @@ function Home() {
     }, []);
 
     return (
-        <section className="home-page" style={{minWidth: "98vw"}}>
+        <section className="home-page" style={{minWidth: "100vw"}}>
            <Container className="fireflies-container" ref={fireFliesContainerRef}>
                 {Array.from({ length: totalFireFlies }, (_, index) => (
                     <div
                         key={index}
                         className="dot"
-                        style={{
-                            // top: `${Math.random() * 100}vh`,
-                            // left: `${Math.random() * 100}vw`,
-                        }}
                     />
                 ))}
                 <div id="intro">
@@ -116,7 +112,7 @@ function Home() {
                     </Col>
                 </Row>
             </Container>
-            <Container className="home-container" id="poetry" style={{minWidth: "98vw"}}>
+            <Container className="home-container" id="poetry" style={{minWidth: "100vw"}}>
                     <h2 style={{textAlign: "center", fontSize: "35px", padding:"3%", marginTop: "15%"}}>Poetry</h2>
                     <Carousel>
                         <Carousel.Item>

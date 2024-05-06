@@ -16,6 +16,7 @@ import Home from './pages/Home';
 import About from './pages/About'
 import Contact from './pages/Contact';
 import Poetry from './pages/Poetry'
+import Footer from './components/Footer'
 // import Campfire from './components/Campfire';
 
 const routes = [
@@ -26,21 +27,21 @@ const routes = [
     nodeRef: createRef()
   },
   {
-      path: '/about',
-      name: 'About',
-      element: <About />,
-      nodeRef: createRef()
-    },
+    path: '/poetry',
+    name: 'Poetry',
+    element: <Poetry />,
+    nodeRef: createRef()
+  },
+  // {
+  //     path: '/about',
+  //     name: 'About',
+  //     element: <About />,
+  //     nodeRef: createRef()
+  //   },
     {
       path: '/contact',
       name: 'Contact',
       element: <Contact />,
-      nodeRef: createRef()
-    },
-    {
-      path: '/poetry',
-      name: 'Poetry',
-      element: <Poetry />,
       nodeRef: createRef()
     },
     // {
@@ -86,6 +87,7 @@ function App() {
         </CSSTransition>
       </SwitchTransition>
     </Container>
+    <Footer />
     </>
   )
 }

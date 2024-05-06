@@ -15,9 +15,9 @@ h1 {
 }
 
 .fireflies-container {
-    min-width: 95vw;
+    min-width: 100vw;
     min-height: 100vh;
-    overflow: hidden;
+    overflow: hidden !important;
 }
 
 .home-container {
@@ -117,7 +117,7 @@ h1 {
 #novel {
     background-color: rgba(255, 0, 0, 0.227);
     padding: 2%;
-    min-width: 98vw;
+    min-width: 100vw;
 }
 /* #novel {
     width: 80%;
@@ -181,7 +181,7 @@ h1 {
         /* position: absolute; */
         margin-top: 45%;
         /* margin-left: 50%; */
-        margin-right: 50%;
+        margin-right: 50%;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
         width: 90%;
         font-size: 20px;
         color: white;
