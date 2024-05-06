@@ -99,10 +99,10 @@ function Home() {
                         <div id="intro-image"><img src={campfire}/></div>
                 </div>
             </Container>
-            <Container className="home-container" id="novel" style={{backgroundColor: "blue", minWidth: "98vw", padding: "2%"}}>
+            <Container className="home-container" id="novel">
                 <h2 style={{ marginBottom: "8%", textAlign: "center", fontSize: "35px" }}>Coming Soon</h2>
                 <Row>
-                    <Col>
+                    <Col id="left">
                         <div id="book-cover">
                             <h3>Their Savage Daughters</h3>
                         </div>
