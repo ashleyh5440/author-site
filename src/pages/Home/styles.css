@@ -43,7 +43,6 @@ h1 {
     flex-wrap: wrap;
     width: 100%;
     padding: 0%;
-    border: 2px solid green;
 }
 
 .carousel {
@@ -95,12 +94,11 @@ h1 {
     align-items: center;
     width: 100%;
     text-align: center;
-    margin-top: 7%;
+    margin-top: 5%;
 }
 
-#intro-image {
-    margin-top: 5%;
-    width: 30%;
+#campfire {
+    width: 40%;
     opacity: 0.5;
 }
 
@@ -108,13 +106,13 @@ h1 {
     width: 100%;
 }
 
-#intro-poem {
+/* #intro-poem {
     position: absolute;
     margin-top: 10%;
     margin-left: 50%;
     font-size: 24px;
     color: white;
-}
+} */
 
 #novel {
     background-color: rgba(255, 0, 0, 0.227);
