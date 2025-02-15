@@ -36,43 +36,43 @@ function Home() {
         });
 
         // Firefly animation
-        const w = window.innerWidth;
-        const h = window.innerHeight;
+        // const w = window.innerWidth;
+        // const h = window.innerHeight;
 
-        const Anim = (elm) => {
-            const containerRect = fireFliesContainerRef.current.getBoundingClientRect();
-            const containerWidth = containerRect.width;
-            const containerHeight = containerRect.height;
+        // const Anim = (elm) => {
+        //     const containerRect = fireFliesContainerRef.current.getBoundingClientRect();
+        //     const containerWidth = containerRect.width;
+        //     const containerHeight = containerRect.height;
 
-            gsap.to(elm, {
-                duration: Math.random() * 10 + 10,
-                x: Math.random() * containerWidth,
-                y: Math.random() * containerHeight,
-                opacity: Math.random(),
-                scale: Math.random() * 0.5 + 1,
-                delay: Math.random() * 2,
-                onComplete: () => Anim(elm),
-            });
-        };
+        //     gsap.to(elm, {
+        //         duration: Math.random() * 10 + 10,
+        //         x: Math.random() * containerWidth,
+        //         y: Math.random() * containerHeight,
+        //         opacity: Math.random(),
+        //         scale: Math.random() * 0.5 + 1,
+        //         delay: Math.random() * 2,
+        //         onComplete: () => Anim(elm),
+        //     });
+        // };
 
-        const fireFlies = fireFliesContainerRef.current.children;
+        // const fireFlies = fireFliesContainerRef.current.children;
 
-        for (let i = 0; i < totalFireFlies; i++) {
-            const fireFly = fireFlies[i];
-            gsap.set(fireFly, { opacity: 0 });
-            Anim(fireFly);
-        }
+        // for (let i = 0; i < totalFireFlies; i++) {
+        //     const fireFly = fireFlies[i];
+        //     gsap.set(fireFly, { opacity: 0 });
+        //     Anim(fireFly);
+        // }
 
-        return () => {
-            for (let i = 0; i < totalFireFlies; i++) {
-                gsap.killTweensOf(fireFlies[i]);
-            }
-        };
+        // return () => {
+        //     for (let i = 0; i < totalFireFlies; i++) {
+        //         gsap.killTweensOf(fireFlies[i]);
+        //     }
+        // };
     }, []);
 
     return (
         <section className="home-page" style={{minWidth: "100vw"}}>
-           <Container className="fireflies-container" ref={fireFliesContainerRef}>
+           {/* <Container className="fireflies-container" ref={fireFliesContainerRef}>
                 {Array.from({ length: totalFireFlies }, (_, index) => (
                     <div
                         key={index}
@@ -94,10 +94,10 @@ function Home() {
                         </div>
                         <div id="intro-image"><img src={campfire}/></div>
                 </div>
-            </Container>
-            <Container className="home-container" id="novel">
-                <h2 style={{ marginBottom: "8%", textAlign: "center", fontSize: "35px" }}>Coming Soon</h2>
-                <Row>
+            </Container> */}
+            <Container className="home-container" id="intro">
+                <h2 style={{ marginBottom: "8%", textAlign: "center", fontSize: "35px" }}>NH Akbara</h2>
+                {/* <Row>
                     <Col id="left">
                         <div id="book-cover">
                             <h3>Their Savage Daughters</h3>
@@ -110,9 +110,12 @@ function Home() {
                         <br />
                         <p>As atrocities mount and blood is shed, Rana and Oni become positioned to change the fate of their people. To do so, they must answer one question: is freedom worth the risk of total eradication?</p>
                     </Col>
-                </Row>
+                </Row> */}
+                <div id="bio">
+                    <p>N.H. Akbara hoards stories like a dragon hoards its treasure — fiercely, obsessively, and with no intention of ever letting go. A lifelong devotee of the strange and unusual, she earned a BA in English Literature from Bloomsburg University and an MFA in Popular Fiction Writing and Publishing from Emerson College in an attempt to give her obsession with dark stories a respectable-sounding pedigree — because apparently, "professional storyteller of the weird and supernatural" was not a real job.</p>
+                </div>
             </Container>
-            <Container className="home-container" id="poetry" style={{minWidth: "100vw"}}>
+            {/* <Container className="home-container" id="poetry" style={{minWidth: "100vw"}}>
                     <h2 style={{textAlign: "center", fontSize: "35px", padding:"3%", marginTop: "15%"}}>Poetry</h2>
                     <Carousel>
                         <Carousel.Item>
@@ -152,7 +155,7 @@ function Home() {
                             </Carousel.Caption>
                         </Carousel.Item>
                     </Carousel>
-                </Container>
+                </Container> */}
         </section>
     )
 }

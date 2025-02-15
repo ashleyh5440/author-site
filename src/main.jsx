@@ -70,7 +70,7 @@ function App() {
   const { nodeRef } = routes.find((route) => route.path === location.pathname) ?? {}
   return (
     <>
-    <Navigation routes={routes} />
+    <Navigation routes={routes} style={{color: "white"}}/>
     <Container className="application">
       <SwitchTransition>
         <CSSTransition
