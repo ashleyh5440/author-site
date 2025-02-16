@@ -10,6 +10,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import Button from 'react-bootstrap/Button';
 
 import campfire from '../../../public/images/campfire.gif';
+import logo from '../../../public/images/logo.png';
 import './styles.css';
 
 function Home() {
@@ -70,6 +71,13 @@ function Home() {
         // };
     }, []);
 
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };    
+
     return (
         <section className="home-page" style={{minWidth: "100vw"}}>
            {/* <Container className="fireflies-container" ref={fireFliesContainerRef}>
@@ -80,8 +88,12 @@ function Home() {
                     />
                 ))}
                 <div id="intro">
-                    <h1>NH Akbar</h1>
-                        <div id="intro-poem">
+                    <div style={{position: "absolute"}}>
+                    <img src={logo} style={{width: "8%", marginBottom: "3%"}}/>
+                        <h1>NH Akbar</h1>
+                    </div>
+                    <div id="campfire"><img src={campfire}/></div>
+                    <div id="intro-poem">
                             <p>If you are a dreamer, come in</p>
                             <p>If you are a dreamer, a wisher, a liar,</p>
                             <p>A hope-er, a pray-er, a magic bean buyer . . .</p>
@@ -90,9 +102,8 @@ function Home() {
                             <p>Come in!</p>
                             <p>Come in!</p>
                             <br />
-                            <p style={{fontSize: "20px"}}>Shel Silverstein</p>
+                            <p style={{fontSize: "12px"}}>Shel Silverstein</p>
                         </div>
-                        <div id="intro-image"><img src={campfire}/></div>
                 </div>
             </Container> */}
             <Container className="home-container" id="intro">
@@ -121,37 +132,37 @@ function Home() {
                         <Carousel.Item>
                             <Carousel.Caption>
                             <h3>In the place where we hide our dreams</h3>
-                            <Button variant="primary">Read</Button>
+                            <Button variant="primary"><NavLink to='/poetry#1' onClick={() => scrollToSection('1')}>Read</NavLink></Button>
                             </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item>
                             <Carousel.Caption>
                                 <h3>My goddess is of many faces</h3>
-                                <Button variant="primary">Read</Button>
+                                <Button variant="primary"><NavLink to='/poetry#2' onClick={() => scrollToSection('1')}>Read</NavLink></Button>
                             </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item>
                             <Carousel.Caption>
                                 <h3>My home is one made of glass</h3>
-                                <Button variant="primary">Read</Button>
+                                <Button variant="primary"><NavLink to='/poetry#3' onClick={() => scrollToSection('1')}>Read</NavLink></Button>
                             </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item>
                             <Carousel.Caption>
                                 <h3>For her</h3>
-                                <Button variant="primary">Read</Button>
+                                <Button variant="primary"><NavLink to='/poetry#4' onClick={() => scrollToSection('1')}>Read</NavLink></Button>
                             </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item>
                             <Carousel.Caption>
                                 <h3>Baby girl with the beautiful mind</h3>
-                                <Button variant="primary">Read</Button>
+                                <Button variant="primary"><NavLink to='/poetry#5' onClick={() => scrollToSection('1')}>Read</NavLink></Button>
                             </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item>
                             <Carousel.Caption>
                                 <h3>Baby boy with the tender arms</h3>
-                                <Button variant="primary">Read</Button>
+                                <Button variant="primary"><NavLink to='/poetry#6' onClick={() => scrollToSection('1')}>Read</NavLink></Button>
                             </Carousel.Caption>
                         </Carousel.Item>
                     </Carousel>
