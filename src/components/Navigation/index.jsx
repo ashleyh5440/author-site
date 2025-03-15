@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 function Navigation({ routes }) {
   return (
-    <Navbar style={{backgroundColor: "rgb(67, 14, 24)"}}>
+    <Navbar style={{backgroundColor: "rgb(35, 17, 29)"}}>
       <Nav className="mx-auto">
         {routes.map((route) => (
           <Nav.Link style={{color: "white"}}
